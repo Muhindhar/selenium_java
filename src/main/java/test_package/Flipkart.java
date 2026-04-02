@@ -2,11 +2,21 @@ package test_package;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+
 
 public class Flipkart {
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-
+    	 WebDriver driver = new FirefoxDriver(); 
+    	//WebDriver driver = new ChromeDriver();
+    	//WebDriver driver = new EdgeDriver();
+    	//WebDriver driver = new SafariDriver();
+    
+    	 
+    	
         driver.get("https://www.flipkart.com/");
 
         String title = driver.getTitle();
