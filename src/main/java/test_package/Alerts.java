@@ -21,7 +21,7 @@ public class Alerts {
 		show.click();
 		Alert sh = driver.switchTo().alert();
 		sh.accept();
-		System.out.println("Accepted");
+		System.out.println("Accepted!!");
 		
 		WebElement al = driver.findElement(By.cssSelector("button[id='j_idt88:j_idt93'] span[class='ui-button-text ui-c']"));
 		al.click();
