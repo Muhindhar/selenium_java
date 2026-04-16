@@ -35,16 +35,16 @@ public class Assessment1_Question {
 
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Laptops"))).click();
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
-                By.xpath("//div[@id='tbodyid']//h4/a")));
+                By.xpath("//a[normalize-space()='MacBook Pro']")));
 
         List<WebElement> productList = driver.findElements(
-                By.xpath("//div[@id='tbodyid']//h4/a"));
+                By.xpath("//a[contains(@class,'hrefch')]"));
 
         Set<String> sortedProducts = new TreeSet<>();
         for (WebElement p : productList) {
             sortedProducts.add(p.getText());
         }
-
+        System.out.println(sortedProducts);
         System.out.println("Sorted Laptop List:");
         for (String name : sortedProducts) {
             System.out.println(name);
