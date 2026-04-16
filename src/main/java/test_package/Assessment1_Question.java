@@ -17,9 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Assessment1_Question {
-
     public static void main(String[] args) {
-
         WebDriver driver = new ChromeDriver();
         driver.get("https://demoblaze.com/");
         driver.manage().window().maximize();
@@ -33,11 +31,9 @@ public class Assessment1_Question {
         driver.findElement(By.xpath("//button[text()='Log in']")).click();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nameofuser")));
-
         System.out.println("Logged in successfully");
 
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Laptops"))).click();
-
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
                 By.xpath("//div[@id='tbodyid']//h4/a")));
 
@@ -45,7 +41,6 @@ public class Assessment1_Question {
                 By.xpath("//div[@id='tbodyid']//h4/a"));
 
         Set<String> sortedProducts = new TreeSet<>();
-
         for (WebElement p : productList) {
             sortedProducts.add(p.getText());
         }
@@ -93,11 +88,7 @@ public class Assessment1_Question {
        year.sendKeys("2026");
        driver.findElement(By.xpath("//button[text()='Purchase']")).click();
        
-       
-        
-       WebElement purchase = wait.until(
-               ExpectedConditions.visibilityOfElementLocated(
-                       By.xpath("//p[@class='lead text-muted ']")));
+       WebElement purchase = wait.until(ExpectedConditions.visibilityOfElementLocated(  By.xpath("//p[@class='lead text-muted ']")));
        String msg= purchase.getText();
        System.out.println(msg);
        
